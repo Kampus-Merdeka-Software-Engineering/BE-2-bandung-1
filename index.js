@@ -3,6 +3,7 @@ const app = express()
 const port = 3000
 const userRouter = require('./routes/User')
 
+app.use(express.json());
 app.use(userRouter)
 
 app.listen(port, () => {
