@@ -17,12 +17,12 @@ model User {
   updatedAt      DateTime  @updatedAt
   name           String?
   email          String    @unique
-  telp_number    Int       
+  telp_number    String    
   destinations   String    @db.VarChar(255) 
   address        String    @db.VarChar(255) 
   quantity       Int
   Price          Int 
-  payment_method Int
+  payment_method String
   day_date       DateTime?
   pickup_time    DateTime?
 }
