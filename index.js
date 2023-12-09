@@ -1,33 +1,12 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const cors = require('cors');
+const app = express();
 const port = 3000
-const bodyParser = require('body-parser')
-// URL/endpoint utama method GET
+const userRouter = require('./routes/User')
 
-app.use(bodyParser.json())
-
-app.get('/', (req, res) => {
-    res.send('main page')
-})
-
-app.get('/home', (req, res) => {
-    console.log({params: req.query})
-  res.send('jateng')
-})
-
-app.post('/login', (req, res) => {
-    console.log({ requestFromOutside: req.body })
-    res.send('login success')
-})
-
-app.put('/username', (req, res) => {
-    console.log({ updateData: req.body })
-    const username =req.body.username
-    if (username === usernameFromDbExist){
-        res.status(400).send("username telah digunakan")
-    }
-    res.send('Update success')
-})
+app.use(cors());
+app.use(express.json());
+app.use(userRouter)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
