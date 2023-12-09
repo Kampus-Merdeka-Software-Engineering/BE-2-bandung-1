@@ -3,7 +3,8 @@ const {prisma} = require('../prisma-client/index')
 async function createDestinations(req, res) {
     try {
         const { title, description } = req.body;
-        const destination = await prisma.Destionations.create({
+        console.log(req.body)
+        const destination = await prisma.Destinations.create({
          data: {
             title: title,
             description: description,
@@ -15,6 +16,7 @@ async function createDestinations(req, res) {
             message: 'data has been recorded:)'
         })
     } catch (error) {
+        console.log (error)
       res.status(500).json({ error: 'Internal server error' });
     }
   }
