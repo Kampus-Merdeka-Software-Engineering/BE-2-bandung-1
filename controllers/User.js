@@ -30,7 +30,7 @@ async function createUser(req, res) {
 async function getUser(req, res) {
     try {
         const User = await prisma.User.findMany();
-        console.log(Users);
+        console.log(User);
         res.status(200).json({
             success: true,
             data: User
