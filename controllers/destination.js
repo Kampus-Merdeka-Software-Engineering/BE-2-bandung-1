@@ -22,7 +22,7 @@ async function createDestinations(req, res) {
 async function getDestinations(req, res) {
     try {
         const destination = await prisma.Destinations.findMany();
-        console.log(Destinations);
+        console.log(destination);
         res.status(200).json({
             success: true,
             data: destination

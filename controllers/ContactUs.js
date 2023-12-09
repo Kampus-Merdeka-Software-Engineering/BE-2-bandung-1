@@ -4,7 +4,7 @@ async function createContactUs(req, res) {
   try {
     console.log(req.body);
     const newContact = await prisma.ContactUs.create({
-      data: { name, email, message },
+      data: { name: req.body.name, email: req.body.email, message: req.body.message },
     });
 
     res.status(201).json({

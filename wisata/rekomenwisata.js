@@ -5,28 +5,28 @@ let datarekom = [
     itemSrc: './img/kota-salatiga/BentengPendem.png',
     name: 'Benteng Pendem',
     idkota: 'Salatiga',
-    price: 350000,
+    price: 25000,
   },
   {
     id: 'wisata27',
     itemSrc: './img/kota-salatiga/MataAirSenjoyo.png',
     name: 'Mata Air Senjoyo',
     idkota: 'Salatiga',
-    price: 350000,
+    price: 15000,
   },
   {
     id: 'wisata28',
     itemSrc: './img/kota-salatiga/RawaPening.png',
     name: 'Rawa Pening',
     idkota: 'Salatiga',
-    price: 350000,
+    price: 25000,
   },
   {
     id: 'wisata29',
     itemSrc: './img/kota-salatiga/SalokaThemePark.png',
     name: 'Saloka Theme Park',
     idkota: 'Salatiga',
-    price: 350000,
+    price: 120000,
   },
 ];
 
