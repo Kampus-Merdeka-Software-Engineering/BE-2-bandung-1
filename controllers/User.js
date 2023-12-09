@@ -23,6 +23,7 @@ async function createUser(req, res) {
             message: 'data has been recorded:)'
         })
     } catch (error) {
+        console.log (error)
       res.status(500).json({ error: 'Internal server error' });
     }
   }
