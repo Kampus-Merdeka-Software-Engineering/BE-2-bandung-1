@@ -2,12 +2,15 @@ const {prisma} = require('../prisma-client/index')
 
 async function createDestinations(req, res) {
     try {
-        const { title, description } = req.body;
+        const { title, itemSrc, name, idkota, price } = req.body;
         console.log(req.body)
         const destination = await prisma.Destinations.create({
          data: {
             title: title,
-            description: description,
+            itemSrc: itemSrc,
+            name: name,
+            idkota: idkota,
+            price: price
          },
         })
 

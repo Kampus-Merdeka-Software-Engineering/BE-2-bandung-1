@@ -31,8 +31,11 @@ model Destinations {
   id          Int       @id @default(autoincrement())
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
-  title       String    @db.VarChar(255)
-  description String?
+  title       String?
+  itemSrc     String?
+  name        String?
+  idkota      String?
+  price       String?     
 }
 
 model ContactUs {
